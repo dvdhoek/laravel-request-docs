@@ -186,7 +186,7 @@ class LaravelRequestDocs
             } else if (is_array($rule)) {
                 $rulesStrs = [];
                 foreach ($rule as $ruleItem) {
-                    $rulesStrs[] = is_object($ruleItem) ? get_class($ruleItem) : $ruleItem;
+                    $rulesStrs[] = $ruleItem;
                 }
                 $rules[$attribute][] = implode("|", $rulesStrs);
             } else {
